@@ -10,9 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+
 #include <iostream>
 #include <iomanip>
 #include <cstring>
+#include <string>
+#include <locale>
+
+#define SIZE 100
 
 class PhoneBook
 {
@@ -84,3 +91,5 @@ public:
 		std::cout << "darksecret: " << head[indx].darksecret << "\n";
 	}
 };
+
+#endif

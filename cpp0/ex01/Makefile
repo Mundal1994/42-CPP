@@ -14,8 +14,7 @@ NAME = phonebook
 
 CC = c++ -Wall -Wextra -Werror -std=c++98
 
-SRC = phonebook.cpp
-SRC += ClassPhoneBook.cpp
+SRC = main.cpp
 
 all: $(NAME)
 $(NAME): $(SRC)
