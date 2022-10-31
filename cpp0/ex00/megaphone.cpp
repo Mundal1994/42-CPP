@@ -1,14 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: molesen <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/31 15:21:48 by molesen           #+#    #+#             */
+/*   Updated: 2022/10/31 15:21:49 by molesen          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <cctype>
 #include <cstring>
 
-/*
-argc: number of strings in array argv
-argv: array of command-line argument stringgs
+class PhoneBook;
 
-can add following to argument: char *envp[]
-envp: array of environment variable strings
-*/
 int main(int argc, char *argv[])
 {
 	int		count;

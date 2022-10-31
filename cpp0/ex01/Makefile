@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: molesen <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/31 15:21:40 by molesen           #+#    #+#              #
-#    Updated: 2022/10/31 15:21:43 by molesen          ###   ########.fr        #
+#    Created: 2022/10/31 15:21:08 by molesen           #+#    #+#              #
+#    Updated: 2022/10/31 15:21:11 by molesen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-NAME = megaphone
+NAME = phonebook
 
 CC = c++ -Wall -Wextra -Werror -std=c++98
 
-SRC = megaphone.cpp
+SRC = phonebook.cpp
+SRC += ClassPhoneBook.cpp
 
 all: $(NAME)
 $(NAME): $(SRC)
