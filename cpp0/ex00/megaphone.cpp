@@ -1,4 +1,7 @@
-#include <stdio.h>
+#include <iostream>
+#include <cctype>
+#include <cstring>
+
 /*
 argc: number of strings in array argv
 argv: array of command-line argument stringgs
@@ -8,13 +11,29 @@ envp: array of environment variable strings
 */
 int main(int argc, char *argv[])
 {
-	//int count;
+	int		count;
+	int		i;
+	int		len;
+	char	bigLetter;
 
-	// Display each command-line argument.
-	if (argc and argv)
-		puts("this is a string with puts function");
-	// std::cout << "\nCommand-line arguments:\n";
-	// for( count = 0; count < argc; count++ )
-	// 	std::cout << "  argv[" << count << "]   "
-	// 			<< argv[count] << "\n";
+	if (argc > 1)
+	{
+		count = 1;
+		while (count < argc)
+		{
+			i = 0;
+			len = strlen(argv[count]);
+			while (i < len)
+			{
+				bigLetter = toupper(argv[count][i]);
+				std::cout << bigLetter;
+				++i;
+			}
+			++count;
+		}
+		std::cout << "\n";
+	}
+	else
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << "\n";
+	return (0);
 }

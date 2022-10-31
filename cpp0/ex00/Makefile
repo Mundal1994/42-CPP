@@ -20,6 +20,9 @@ all: $(NAME)
 $(NAME): $(SRC)
 	$(CC) $(SRC) -o $(NAME)
 
-re: all
+clean:
+	/bin/rm -f $(NAME)
 
-.PHONY: all  re
+re: clean all
+
+.PHONY: all clean re
