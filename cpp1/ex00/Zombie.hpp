@@ -14,17 +14,18 @@
 # define ZOMBIE_HPP
 
 #include <iostream>
+#include <string>
 
 class Zombie
 {
 private:
 	std::string name;
 public:
-	Zombie()
+	~Zombie()
 	{
-		name = "";
+		std::cout << "The destructor destroid " << name << "\n";
 	}
-	Zombie(std::string str)
+	void setZombie(std::string str)
 	{
 		name = str;
 	}
@@ -33,5 +34,8 @@ public:
 		std::cout << name << ": BraiiiiiiinnnzzzZ...\n";
 	}
 };
+
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif

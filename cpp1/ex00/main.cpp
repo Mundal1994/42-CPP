@@ -12,10 +12,12 @@
 
 #include "Zombie.hpp"
 
+/*	calling randomChump function to create and announce a zombie	*/
 int main(void)
 {
-	Zombie zombie("Bob the builder");
-
-	zombie.announce();
+	randomChump("Bob the builder");
+	randomChump("Foo");
+	randomChump("Cookie Monster");
+	randomChump("ZomZom");
 	return (0);
 }

@@ -15,6 +15,8 @@ NAME = zombie
 CC = c++ -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp
+SRC += newZombie.cpp
+SRC += randomChump.cpp
 
 all: $(NAME)
 $(NAME): $(SRC)

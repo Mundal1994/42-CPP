@@ -10,4 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
 
+/*
+gets the pointer to the new zombie and announces the zombie
+it then makes sure to delete the allocated pointer and the destructor inside
+the class will be called
+*/
+void	randomChump(std::string name)
+{
+	Zombie	*pnt;
+
+	pnt = newZombie(name);
+	(*pnt).announce();
+	delete pnt;
+}

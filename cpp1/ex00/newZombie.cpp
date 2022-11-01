@@ -10,4 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
 
+/*
+creates a pointer to a new zombie
+uses new function to allocate memory for the zombie on the heap
+it then returns a pointer to the new zombie
+*/
+Zombie*	newZombie(std::string name)
+{
+	Zombie *temp;
+
+	temp = new Zombie;
+	temp->setZombie(name);
+	return (temp);
+}
