@@ -32,11 +32,9 @@ void	Harl::error(void)
 	std::cout << "[ ERROR ]" << std::endl;
 }
 
-typedef void	(*functionPointer)(void);
-
 void	Harl::complain(std::string level)
 {
-	void		(Harl::*func_array[])(void) = {
+	void		(Harl::*func_array[4])(void) = {
 		&Harl::debug,
 		&Harl::info,
 		&Harl::warning,
@@ -49,10 +47,7 @@ void	Harl::complain(std::string level)
 	while (i < 4)
 	{
 		if (level == array[i])
-		{
-			void (Harl::*select)(void) = func_array[i];
-			(this->*select)();
-		}
+			(this->*func_array[i])();
 		++i;
 	}
 }
