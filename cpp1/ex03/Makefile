@@ -15,6 +15,9 @@ NAME = violence
 CC = c++ -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp
+SRC += Weapon.cpp
+SRC += HumanA.cpp
+SRC += HumanB.cpp
 
 all: $(NAME)
 $(NAME): $(SRC)

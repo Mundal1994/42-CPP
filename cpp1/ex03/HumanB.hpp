@@ -13,8 +13,7 @@
 #ifndef HUMANB_HPP
 # define HUMANB_HPP
 
-#include <iostream>
-#include <string>
+#include "Weapon.hpp"
 
 class HumanB
 {
@@ -22,18 +21,10 @@ private:
 	std::string	name;
 	Weapon		*weapon;
 public:
-	HumanB(std::string str)//: name(str)
-	{
-		name = str;
-	}
-	void	setWeapon(Weapon& club)
-	{
-		weapon = &club;
-	}
-	void	attack(void)
-	{
-		std::cout << name << " attacks with their " << weapon->getType() << "\n";
-	}
+	HumanB(std::string str);
+	~HumanB();
+	void	setWeapon(Weapon& club);
+	void	attack(void);
 };
 
 #endif

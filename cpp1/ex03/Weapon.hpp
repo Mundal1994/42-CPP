@@ -21,27 +21,11 @@ class Weapon
 private:
 	std::string type;
 public:
-	Weapon()
-	{
-		return ;
-	}
-	Weapon(std::string weapon)
-	{
-		type = weapon;
-		return ;
-	}
-	~Weapon()
-	{
-		return ;
-	}
-	void setType(std::string weapon)
-	{
-		type = weapon;
-	}
-	const std::string&	getType(void)
-	{
-		return (type);
-	}
+	Weapon();
+	Weapon(std::string weapon);
+	~Weapon();
+	void setType(std::string weapon);
+	const std::string&	getType(void);
 };
 
 #endif

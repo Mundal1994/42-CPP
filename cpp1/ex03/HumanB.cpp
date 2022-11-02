@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: molesen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/01 14:47:14 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/01 14:47:16 by molesen          ###   ########.fr       */
+/*   Created: 2022/11/02 10:32:31 by molesen           #+#    #+#             */
+/*   Updated: 2022/11/02 10:32:32 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include "HumanB.hpp"
 
-#include "Weapon.hpp"
-
-class HumanA
+HumanB::HumanB(std::string str): name(str)
 {
-private:
-	std::string	name;
-	Weapon		*weapon;
-public:
-	HumanA(std::string str, Weapon &club);
-	~HumanA();
-	void	attack(void);
-};
+	return ;
+}
 
-#endif
+HumanB::~HumanB()
+{
+	return ;
+}
+
+void	HumanB::setWeapon(Weapon& club)
+{
+	weapon = &club;
+}
+
+void	HumanB::attack(void)
+{
+	std::cout << name << " attacks with their " << weapon->getType() << "\n";
+}
