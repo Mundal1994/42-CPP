@@ -27,17 +27,20 @@ Fixed::~Fixed()
 }
 
 /*	Copy constructor	*/
-Fixed::Fixed(Fixed& t)
+Fixed::Fixed(const Fixed& t)
 {
 	std::cout << "Copy constructor called\n";
-	Fixed::operator=(t);
+	value = t.getRawBits();
 }
 
 /*	Copy assignment operator	*/
-Fixed&	Fixed::operator=(Fixed& t)
+Fixed&	Fixed::operator=(const Fixed& t)
 {
 	std::cout << "Copy assignment operator called\n";
-	(*this).value = t.getRawBits();
+	if (this != &t)
+	{
+		(*this).setRawBits(t.getRawBits());
+	}
 	return (*this);
 }
 

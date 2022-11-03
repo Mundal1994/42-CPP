@@ -23,8 +23,8 @@ private:
 public:
 	Fixed();
 	~Fixed();
-	Fixed(Fixed& t);
-	Fixed&	operator=(Fixed& t);
+	Fixed(const Fixed& t);
+	Fixed&	operator=(const Fixed& t);
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
 };
