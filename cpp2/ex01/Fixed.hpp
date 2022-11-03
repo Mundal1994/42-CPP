@@ -18,7 +18,7 @@
 class Fixed
 {
 private:
-	float				value;
+	int					value;
 	static const int	frac = 8;
 public:
 	Fixed();
@@ -27,11 +27,12 @@ public:
 	~Fixed();
 	Fixed(const Fixed& t);
 	Fixed&	operator=(const Fixed& t);
-	float	getRawBits(void) const;
+	int		getRawBits(void) const;
 	void	setRawBits(float const raw);
 	float	toFloat(void) const;
 	int		toInt(void) const;
-	friend std::ostream& operator<<(std::ostream &out, const Fixed& t);
 };
+
+std::ostream& operator<<(std::ostream &out, const Fixed& t);
 
 #endif
