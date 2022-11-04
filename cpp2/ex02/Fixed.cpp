@@ -211,19 +211,42 @@ Fixed	Fixed::operator--(int)
 static member function 'min'
 takes smaller of two fixed-point numbers
 */
+Fixed&	Fixed::min(Fixed& a, Fixed& b)
+{
+	if (b.getRawBits() < a.getRawBits())
+		return (b);
+	return (a);
+}
 
 /*
 static member function 'min'
 takes smaller of two constant fixed-point numbers
 */
-
+const Fixed&	Fixed::min(const Fixed& a, const Fixed& b)
+{
+	if (b.getRawBits() < a.getRawBits())
+		return (b);
+	return (a);
+}
 
 /*
 static member function 'max'
 takes bigger of two fixed-point numbers
 */
+Fixed&	Fixed::max(Fixed& a, Fixed& b)
+{
+	if (b.getRawBits() > a.getRawBits())
+		return (b);
+	return (a);
+}
 
 /*
 static member function 'max'
 takes bigger of two constantfixed-point numbers
 */
+const Fixed&	Fixed::max(const Fixed& a, const Fixed& b)
+{
+	if (b.getRawBits() > a.getRawBits())
+		return (b);
+	return (a);
+}

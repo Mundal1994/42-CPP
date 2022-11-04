@@ -117,7 +117,10 @@ int	main(void)
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
-	//std::cout << Fixed::max( a, b ) << std::endl;
+
+	/*	print min and max	*/
+	std::cout << "\nprint max: " << Fixed::max( a, b ) << std::endl;
+	std::cout << "print min: " << Fixed::min( a, b ) << std::endl;
 
 	/*	print increment	*/
 	std::cout << "\nprint decrement\n" << a << std::endl;
@@ -125,6 +128,10 @@ int	main(void)
 	std::cout << a << std::endl;
 	std::cout << a-- << std::endl;
 	std::cout << a << std::endl;
+
+	/*	print min and max	*/
+	std::cout << "\nprint max: " << Fixed::max( a, b ) << std::endl;
+	std::cout << "print min: " << Fixed::min( a, b ) << std::endl;
 
 	/*	6 comparison operators: >, <, >=, <=, == and !=	*/
 	equal_to_operator();
