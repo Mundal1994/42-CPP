@@ -52,7 +52,10 @@ public:
 	Fixed	operator++(int);
 	Fixed&	operator--();
 	Fixed	operator--(int);
-	/*	public overloaded member functions	*/
+	/*
+	public overloaded member functions
+	static member functions can be called in the code from anywhere
+	*/
 	static Fixed&	min(Fixed& a, Fixed& b);
 	static const Fixed&	min(const Fixed& a, const Fixed& b);
 	static Fixed&	max(Fixed& a, Fixed& b);
