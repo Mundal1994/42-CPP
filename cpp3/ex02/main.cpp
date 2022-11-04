@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 15:46:05 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/04 17:16:09 by molesen          ###   ########.fr       */
+/*   Created: 2022/11/04 12:48:23 by molesen           #+#    #+#             */
+/*   Updated: 2022/11/04 16:47:50 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ScavTrap.hpp"
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
-
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+int	main(void)
 {
-public:
-	ScavTrap(const std::string str);
-	~ScavTrap();
-	void	guardGate();
-};
+	ScavTrap	warrior("Bob");
+	ScavTrap	knight("Tim");
 
-#endif
+	warrior.attack(knight.getClapTrap_name());
+	knight.takeDamage(warrior.getClapTrap_damage());
+	knight.beRepaired(5);
+	knight.guardGate();
+	return (0);
+}

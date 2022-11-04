@@ -6,7 +6,7 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:46:02 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/04 17:15:47 by molesen          ###   ########.fr       */
+/*   Updated: 2022/11/04 17:15:41 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ ScavTrap::~ScavTrap()
 	std::cout << "Destroy ScavTrap " << (*this).getClapTrap_name() << "\n";
 }
 
+/*	displays positive high five request	*/
 void	ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << (*this).getClapTrap_name() << " is now in Gate Keeper mode\n";
+	std::cout << "ScavTrap request for a positive high five\n";
 }

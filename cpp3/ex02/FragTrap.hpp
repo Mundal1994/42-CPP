@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 15:46:02 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/04 17:15:47 by molesen          ###   ########.fr       */
+/*   Created: 2022/11/04 16:53:56 by molesen           #+#    #+#             */
+/*   Updated: 2022/11/04 16:57:44 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(const std::string str)
+FragTrap::FragTrap(const std::string str)
 {
-	(*this).setClapTrap(str, 100, 50, 20);
-	std::cout << "Constructs ScavTrap " << (*this).getClapTrap_name() << "\n";
+	(*this).setClapTrap(str, 100, 100, 30);
+	std::cout << "Constructs FragTrap " << (*this).getClapTrap_name() << "\n";
 }
 
-ScavTrap::~ScavTrap()
+FragTrap::~FragTrap()
 {
-	std::cout << "Destroy ScavTrap " << (*this).getClapTrap_name() << "\n";
+	std::cout << "Destroy FragTrap " << (*this).getClapTrap_name() << "\n";
 }
 
-void	ScavTrap::guardGate()
+void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "ScavTrap " << (*this).getClapTrap_name() << " is now in Gate Keeper mode\n";
+	std::cout << "This is a positive HighFive request from " <<
+		(*this).getClapTrap_name() << "\n";
 }
