@@ -58,10 +58,59 @@ static void	bigger_or_less_operator()
 		std::cout << "c is smaller or equal d\n";
 }
 
+/*	arithmetic operators	*/
+static void	arithmetic_operators_plus(void)
+{
+	Fixed a (10);
+	Fixed b (25);
+	Fixed c;
+
+	c = a + b;
+	std::cout << "\n" << a.getRawBits() << " + " << b.getRawBits() <<
+		" == " << c.getRawBits() << "\n";
+
+}
+
+static void	arithmetic_operators_minus(void)
+{
+	Fixed a (10);
+	Fixed b (25);
+	Fixed c;
+
+	c = a - b;
+	std::cout << "\n" << a.getRawBits() << " - " << b.getRawBits() <<
+		" == " << c.getRawBits() << "\n";
+
+}
+
+static void	arithmetic_operators_div(void)
+{
+	Fixed a (10);
+	Fixed b (25);
+	Fixed c;
+
+	c = a / b;
+	std::cout << "\n" << a.getRawBits() << " / " << b.getRawBits() <<
+		" == " << c.getRawBits() << "\n";
+
+}
+
+static void	arithmetic_operators_multi(void)
+{
+	Fixed a (10);
+	Fixed b (25);
+	Fixed c;
+
+	c = a * b;
+	std::cout << "\n" << a.getRawBits() << " * " << b.getRawBits() <<
+		" == " << c.getRawBits() << "\n";
+
+}
+
+
 int	main(void)
 {
 	Fixed a;
-	Fixed b (45);
 	//Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 	// std::cout << a << std::endl;
 	// std::cout << ++a << std::endl;
@@ -94,5 +143,15 @@ int	main(void)
 	equal_to_operator();
 	bigger_or_less_operator();
 	
+	/*	4 arithmetic operators	*/
+	arithmetic_operators_plus();
+	arithmetic_operators_minus();
+	arithmetic_operators_div();
+	arithmetic_operators_multi();
+
+	/*
+	4 increment/decrement (pre-increment and post-increment, pre-decrement
+	and post-decrement) operators
+	*/
 	return 0;
 }

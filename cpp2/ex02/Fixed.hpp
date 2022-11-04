@@ -34,6 +34,8 @@ public:
 };
 
 std::ostream& operator<<(std::ostream &out, const Fixed& t);
+
+/*	6 comparison operators	*/
 bool	operator==(const Fixed& a, const Fixed& b);
 bool	operator!=(const Fixed& a, const Fixed& b);
 bool	operator>(const Fixed& a, const Fixed& b);
@@ -41,5 +43,15 @@ bool	operator<(const Fixed& a, const Fixed& b);
 bool	operator>=(const Fixed& a, const Fixed& b);
 bool	operator<=(const Fixed& a, const Fixed& b);
 
+/*	4 arithmetic operators	*/
+Fixed	operator+(const Fixed& a, const Fixed& b);
+Fixed	operator-(const Fixed& a, const Fixed& b);
+Fixed	operator/(const Fixed& a, const Fixed& b);
+Fixed	operator*(const Fixed& a, const Fixed& b);
+
+/*
+4 increment/decrement (pre-increment and post-increment, pre-decrement
+and post-decrement) operators
+*/
 
 #endif

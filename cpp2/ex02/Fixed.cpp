@@ -121,6 +121,39 @@ bool	operator<=(const Fixed& a, const Fixed& b)
 }
 
 /*	4 arithmetic operators	*/
+Fixed	operator+(const Fixed& a, const Fixed& b)
+{
+	Fixed	temp;
 
-/*	4 increment/decrement (pre-increment and post-increment, pre-decrement
-and post-decrement) operators	*/
+	temp.setRawBits(a.getRawBits() + b.getRawBits());
+	return (temp);
+}
+
+Fixed	operator-(const Fixed& a, const Fixed& b)
+{
+	Fixed	temp;
+
+	temp.setRawBits(a.getRawBits() - b.getRawBits());
+	return (temp);
+}
+
+Fixed	operator/(const Fixed& a, const Fixed& b)
+{
+	Fixed	temp;
+
+	temp.setRawBits(a.getRawBits() / b.getRawBits());
+	return (temp);
+}
+
+Fixed	operator*(const Fixed& a, const Fixed& b)
+{
+	Fixed	temp;
+
+	temp.setRawBits(a.getRawBits() * b.getRawBits());
+	return (temp);
+}
+
+/*
+4 increment/decrement (pre-increment and post-increment, pre-decrement
+and post-decrement) operators
+*/
