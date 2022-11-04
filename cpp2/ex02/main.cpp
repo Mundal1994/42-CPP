@@ -18,7 +18,7 @@ static void	equal_to_operator()
 	Fixed c;
 	Fixed d;
 
-	std::cout << "c : 0 , d : 0\nFirst check: ";
+	std::cout << "\nc : 0 , d : 0\nFirst check: ";
 	if (c == d)
 		std::cout << "c and d are the same\n";
 	if (c != d)
@@ -107,37 +107,24 @@ static void	arithmetic_operators_multi(void)
 
 }
 
-
 int	main(void)
 {
 	Fixed a;
-	//Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	// std::cout << a << std::endl;
-	// std::cout << ++a << std::endl;
-	// std::cout << a << std::endl;
-	// std::cout << a++ << std::endl;
-	// std::cout << a << std::endl;
-	// std::cout << b << std::endl;
-	// std::cout << Fixed::max( a, b ) << std::endl;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	std::cout << "print increment\n" << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	//std::cout << Fixed::max( a, b ) << std::endl;
 
-	// std::cout << a << std::endl;
-	// std::cout << --a << std::endl;
-	// std::cout << a << std::endl;
-	// std::cout << a-- << std::endl;
-	// std::cout << a << std::endl;
-
-	// std::cout << a << std::endl;
-	// std::cout << *a << std::endl;
-	// std::cout << a << std::endl;
-	// std::cout << a* << std::endl;
-	// std::cout << a << std::endl;
-
-
-	// std::cout << a << std::endl;
-	// std::cout << /a << std::endl;
-	// std::cout << a << std::endl;
-	// std::cout << a/ << std::endl;
-	// std::cout << a << std::endl;
+	/*	print increment	*/
+	std::cout << "\nprint decrement\n" << a << std::endl;
+	std::cout << --a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a-- << std::endl;
+	std::cout << a << std::endl;
 
 	/*	6 comparison operators: >, <, >=, <=, == and !=	*/
 	equal_to_operator();

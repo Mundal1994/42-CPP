@@ -90,70 +90,140 @@ std::ostream& operator<<(std::ostream &out, const Fixed& t)
 
 /*	6 comparison operators	*/
 
-bool	operator==(const Fixed& a, const Fixed& b)
+bool	Fixed::operator==(const Fixed& a)
 {
-	return (a.getRawBits() == b.getRawBits());
+	return ((*this).getRawBits() == a.getRawBits());
 }
 
-bool	operator!=(const Fixed& a, const Fixed& b)
+bool	Fixed::operator!=(const Fixed& a)
 {
-	return (a.getRawBits() != b.getRawBits());
+	return ((*this).getRawBits() != a.getRawBits());
 }
 
-bool	operator>(const Fixed& a, const Fixed& b)
+bool	Fixed::operator>(const Fixed& a)
 {
-	return (a.getRawBits() > b.getRawBits());
+	return ((*this).getRawBits() > a.getRawBits());
 }
 
-bool	operator<(const Fixed& a, const Fixed& b)
+bool	Fixed::operator<(const Fixed& a)
 {
-	return (a.getRawBits() < b.getRawBits());
+	return ((*this).getRawBits() < a.getRawBits());
 }
 
-bool	operator>=(const Fixed& a, const Fixed& b)
+bool	Fixed::operator>=(const Fixed& a)
 {
-	return (a.getRawBits() >= b.getRawBits());
+	return ((*this).getRawBits() >= a.getRawBits());
 }
 
-bool	operator<=(const Fixed& a, const Fixed& b)
+bool	Fixed::operator<=(const Fixed& a)
 {
-	return (a.getRawBits() <= b.getRawBits());
+	return ((*this).getRawBits() <= a.getRawBits());
 }
 
 /*	4 arithmetic operators	*/
-Fixed	operator+(const Fixed& a, const Fixed& b)
+Fixed	Fixed::operator+(const Fixed& a)
 {
 	Fixed	temp;
 
-	temp.setRawBits(a.getRawBits() + b.getRawBits());
+	temp.setRawBits((*this).getRawBits() + a.getRawBits());
 	return (temp);
 }
 
-Fixed	operator-(const Fixed& a, const Fixed& b)
+Fixed	Fixed::operator-(const Fixed& a)
 {
 	Fixed	temp;
 
-	temp.setRawBits(a.getRawBits() - b.getRawBits());
+	temp.setRawBits((*this).getRawBits() - a.getRawBits());
 	return (temp);
 }
 
-Fixed	operator/(const Fixed& a, const Fixed& b)
+Fixed	Fixed::operator/(const Fixed& a)
 {
-	Fixed	temp;
+	int		valueA;
+	int		valueB;
 
-	temp.setRawBits(a.getRawBits() / b.getRawBits());
+	valueA = (*this).toFloat();
+	valueB = a.toFloat();
+	Fixed	temp(valueA / valueB);
 	return (temp);
 }
 
-Fixed	operator*(const Fixed& a, const Fixed& b)
+Fixed	Fixed::operator*(const Fixed& a)
 {
-	Fixed	temp;
+	int		valueA;
+	int		valueB;
 
-	temp.setRawBits(a.getRawBits() * b.getRawBits());
+	valueA = (*this).toFloat();
+	valueB = a.toFloat();
+	Fixed	temp(valueA * valueB);
 	return (temp);
 }
 
 /*
 4 increment/decrement (pre-increment and post-increment, pre-decrement
 and post-decrement) operators
+*/
+/*
+Prefix increment
+return new value by reference
+*/
+Fixed&	Fixed::operator++()
+{
+	++value;
+	return (*this);
+}
+
+/*
+Postfix increment
+copies value, increment prefix and return new value
+*/
+Fixed	Fixed::operator++(int)
+{
+	Fixed	temp;
+
+	temp = (*this);
+	operator++();
+	return (temp);
+}
+
+/*	Prefix decrement	*/
+Fixed&	Fixed::operator--()
+{
+	--value;
+	return (*this);
+}
+
+/*
+Postfix decrement
+copies value, increment prefix and return new value
+*/
+Fixed	Fixed::operator--(int)
+{
+	Fixed	temp;
+
+	temp = (*this);
+	operator--();
+	return (temp);
+}
+
+/*	4 public overloaded member functions	*/
+/*
+static member function 'min'
+takes smaller of two fixed-point numbers
+*/
+
+/*
+static member function 'min'
+takes smaller of two constant fixed-point numbers
+*/
+
+
+/*
+static member function 'max'
+takes bigger of two fixed-point numbers
+*/
+
+/*
+static member function 'max'
+takes bigger of two constantfixed-point numbers
 */
