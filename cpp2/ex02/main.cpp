@@ -142,10 +142,5 @@ int	main(void)
 	arithmetic_operators_minus();
 	arithmetic_operators_div();
 	arithmetic_operators_multi();
-
-	/*
-	4 increment/decrement (pre-increment and post-increment, pre-decrement
-	and post-decrement) operators
-	*/
 	return 0;
 }
