@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: molesen <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:08:59 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/03 16:09:00 by molesen          ###   ########.fr       */
+/*   Updated: 2022/11/04 13:08:58 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ static void	arithmetic_operators_plus(void)
 	Fixed c;
 
 	c = a + b;
-	std::cout << "\n" << a.getRawBits() << " + " << b.getRawBits() <<
-		" == " << c.getRawBits() << "\n";
+	std::cout << "\n" << a << " + " << b <<
+		" == " << c << "	|	35\n";
 
 }
 
@@ -78,8 +78,8 @@ static void	arithmetic_operators_minus(void)
 	Fixed c;
 
 	c = a - b;
-	std::cout << "\n" << a.getRawBits() << " - " << b.getRawBits() <<
-		" == " << c.getRawBits() << "\n";
+	std::cout << "\n" << a << " - " << b <<
+		" == " << c << "	|	-15\n";
 
 }
 
@@ -90,8 +90,8 @@ static void	arithmetic_operators_div(void)
 	Fixed c;
 
 	c = a / b;
-	std::cout << "\n" << a.getRawBits() << " / " << b.getRawBits() <<
-		" == " << c.getRawBits() << "\n";
+	std::cout << "\n" << a << " / " << b <<
+		" == " << c << "	|	0.398438\n";
 
 }
 
@@ -102,8 +102,8 @@ static void	arithmetic_operators_multi(void)
 	Fixed c;
 
 	c = a * b;
-	std::cout << "\n" << a.getRawBits() << " * " << b.getRawBits() <<
-		" == " << c.getRawBits() << "\n";
+	std::cout << "\n" << a << " * " << b <<
+		" == " << c << "	|	250\n";
 
 }
 
