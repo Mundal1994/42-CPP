@@ -139,8 +139,8 @@ Fixed	Fixed::operator-(const Fixed& a)
 
 Fixed	Fixed::operator/(const Fixed& a)
 {
-	int		valueA;
-	int		valueB;
+	float	valueA;
+	float	valueB;
 
 	valueA = (*this).toFloat();
 	valueB = a.toFloat();
@@ -150,8 +150,8 @@ Fixed	Fixed::operator/(const Fixed& a)
 
 Fixed	Fixed::operator*(const Fixed& a)
 {
-	int		valueA;
-	int		valueB;
+	float	valueA;
+	float	valueB;
 
 	valueA = (*this).toFloat();
 	valueB = a.toFloat();
