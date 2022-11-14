@@ -6,7 +6,7 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:09:44 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/14 12:13:00 by molesen          ###   ########.fr       */
+/*   Updated: 2022/11/14 13:40:12 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Animal::Animal()
 /*	Destructor	*/
 Animal::~Animal()
 {
+	std::cout << "destructor animal\n";
 	return ;
 }
 
