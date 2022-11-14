@@ -5,26 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 16:53:56 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/04 16:57:44 by molesen          ###   ########.fr       */
+/*   Created: 2022/11/04 16:53:53 by molesen           #+#    #+#             */
+/*   Updated: 2022/11/14 10:55:47 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-FragTrap::FragTrap(const std::string str)
-{
-	(*this).setClapTrap(str, 100, 100, 30);
-	std::cout << "Constructs FragTrap " << (*this).getClapTrap_name() << "\n";
-}
+#include "ClapTrap.hpp"
 
-FragTrap::~FragTrap()
+class FragTrap : public ClapTrap
 {
-	std::cout << "Destroy FragTrap " << (*this).getClapTrap_name() << "\n";
-}
+public:
+	FragTrap(const std::string str);
+	~FragTrap();
+	void	highFivesGuys(void);
+};
 
-void	FragTrap::highFivesGuys(void)
-{
-	std::cout << "This is a positive HighFive request from " <<
-		(*this).getClapTrap_name() << "\n";
-}
+#endif

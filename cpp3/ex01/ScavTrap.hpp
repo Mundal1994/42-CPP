@@ -6,10 +6,9 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:46:05 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/04 17:16:09 by molesen          ###   ########.fr       */
+/*   Updated: 2022/11/14 10:55:23 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
