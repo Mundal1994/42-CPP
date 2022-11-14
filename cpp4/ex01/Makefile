@@ -6,7 +6,7 @@
 #    By: molesen <molesen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/14 11:05:29 by molesen           #+#    #+#              #
-#    Updated: 2022/11/14 11:45:33 by molesen          ###   ########.fr        #
+#    Updated: 2022/11/14 13:37:19 by molesen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ SRC = main.cpp
 SRC += Animal.cpp
 SRC += Dog.cpp
 SRC += Cat.cpp
-SRC += Brain.cpp
 
 all: $(NAME)
 $(NAME): $(SRC)
