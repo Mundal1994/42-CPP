@@ -2,7 +2,7 @@
 
 ## ABOUT
 
-Introduction to CPP
+Introduction to CPP. Assigments made as part of the CPP Piscine at Hive.
 
 
 ## Assignment
