@@ -6,17 +6,19 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:12:16 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/14 11:39:27 by molesen          ###   ########.fr       */
+/*   Updated: 2022/11/14 12:58:54 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
+/*	Default constructor	*/
 Cat::Cat()
 {
 	(*this).setType("Cat");
 }
 
+/*	Destructor	*/
 Cat::~Cat()
 {
 	std::cout << "Destroy Cat\n";

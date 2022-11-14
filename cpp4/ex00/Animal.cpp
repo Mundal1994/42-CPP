@@ -6,7 +6,7 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:09:44 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/14 11:41:10 by molesen          ###   ########.fr       */
+/*   Updated: 2022/11/14 12:13:00 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@ Animal::Animal()
 {
 	(*this).type = "";
 }
-
-// Animal::Animal(std::string str)
-// {
-// 	(*this).type = str;
-// }
 
 /*	Destructor	*/
 Animal::~Animal()

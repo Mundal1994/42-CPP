@@ -6,17 +6,19 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:12:14 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/14 11:39:38 by molesen          ###   ########.fr       */
+/*   Updated: 2022/11/14 12:50:01 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
+/*	Default constructor	*/
 Dog::Dog()
 {
 	(*this).setType("Dog");
 }
 
+/*	Destructor	*/
 Dog::~Dog()
 {
 	std::cout << "Destroy Dog\n";

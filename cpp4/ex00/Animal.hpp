@@ -6,7 +6,7 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:07:04 by molesen           #+#    #+#             */
-/*   Updated: 2022/11/14 11:40:54 by molesen          ###   ########.fr       */
+/*   Updated: 2022/11/14 12:13:05 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ protected:
 	std::string type;
 public:
 	Animal();
-	Animal(const std::string str);
 	~Animal();
 	Animal(const Animal& t);
 	Animal&	operator=(const Animal& t);
