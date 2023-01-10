@@ -1,45 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/10 11:12:17 by molesen           #+#    #+#             */
+/*   Updated: 2023/01/10 11:53:39 by molesen          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
 
 #include <iostream>
+#include <fstream>
 #include "Form.hpp"
 
 class Form;
 
 class ShrubberyCreationForm : public Form
 {
+private:
+	std::string	target;
 public:
-	ShrubberyCreationForm(std::string a):Form(a, false, 145, 137){};
-// private:
-// 	const std::string	name;
-// 	int					grade;
-// public:
-// 	Bureaucrat(const std::string &str, int nbr);
-// 	~Bureaucrat();
-// 	Bureaucrat(const Bureaucrat& t);
-// 	Bureaucrat&	operator=(const Bureaucrat& t);
-// 	const std::string	getName(void) const;
-// 	int	getGrade(void) const;
-// 	void	incrementGrade(void);
-// 	void	decrementGrade(void);
-// 	void	setGrade(int x);
-// 	void	signForm(Form & form);
-// 	class GradeTooHighException : public std::exception
-// 	{
-// 		public:
-// 		virtual const char * what() const throw()
-// 		{
-// 			return "grade too high";
-// 		}
-// 	};
-// 	class GradeTooLowException : public std::exception
-// 	{
-// 		public:
-// 		virtual const char * what() const throw()
-// 		{
-// 			return "grade too low";
-// 		}
-// 	};
+	ShrubberyCreationForm(std::string a):Form("ShrubberyCreationForm", false, 145, 137)
+	{
+		target = a;
+	}
+	std::string	getTarget(void) const;
+	void execute(Bureaucrat const & executor) const;
 };
 
 //std::ostream &  operator  << (std::ostream &ostr, Bureaucrat &a);

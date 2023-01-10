@@ -6,7 +6,7 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:32:32 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/09 12:15:01 by molesen          ###   ########.fr       */
+/*   Updated: 2023/01/10 11:39:49 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ public:
 	void	decrementGrade(void);
 	void	setGrade(int x);
 	void	signForm(Form & form);
+	void	executeForm(Form & form);
 	class GradeTooHighException : public std::exception
 	{
 		public:
@@ -48,6 +49,14 @@ public:
 		virtual const char * what() const throw()
 		{
 			return "grade too low";
+		}
+	};
+	class StatusFalseException : public std::exception
+	{
+		public:
+		virtual const char * what() const throw()
+		{
+			return "form not signed";
 		}
 	};
 };

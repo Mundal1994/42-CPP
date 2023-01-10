@@ -6,7 +6,7 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:01:13 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/09 12:18:53 by molesen          ###   ########.fr       */
+/*   Updated: 2023/01/10 11:03:56 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ public:
 	int		getGradeSign(void) const;
 	int		getGradeExecute(void) const;
 	void	beSigned(Bureaucrat & t);
-	virtual void execute(Bureaucrat const & executor) const = 0;
+	virtual void execute(Bureaucrat const & executor) const = 0;//if const can we change it?
 	class GradeTooHighException : public std::exception
 	{
 		public:

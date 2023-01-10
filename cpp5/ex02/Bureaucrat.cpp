@@ -6,7 +6,7 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:32:17 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/06 18:56:09 by molesen          ###   ########.fr       */
+/*   Updated: 2023/01/10 11:54:36 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,11 +105,28 @@ void	Bureaucrat::signForm(Form & form)
 	try
 	{
 		form.beSigned(*this);
-		std::cout << (*this).getName() << " signs form " << form.getName() << std::endl;
+		std::cout << (*this).getName() << " signs " << form.getName() << std::endl;
 	}
 	catch (std::exception &a)
 	{
 		std::cout << (*this).getName() << " couldn't sign " << form.getName() << " because ";
+		std::cout << a.what() << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(Form & form)
+{
+	try
+	{
+		if (form.getStatus() == "false")
+			throw Bureaucrat::StatusFalseException();
+		if (form.getGradeExecute() < (*this).getGrade())
+			throw Bureaucrat::GradeTooLowException();
+		form.execute((*this));
+	}
+	catch (std::exception &a)
+	{
+		std::cout << (*this).getName() << " couldn't execute " << form.getName() << " because ";
 		std::cout << a.what() << std::endl;
 	}
 }
