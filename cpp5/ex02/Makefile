@@ -20,6 +20,7 @@ SRC += Form.cpp
 SRC += ShrubberyCreationForm.cpp
 SRC += RobotomyRequestForm.cpp
 SRC += PresidentialPardonForm.cpp
+SRC += Intern.cpp
 
 all: $(NAME)
 $(NAME): $(SRC)
