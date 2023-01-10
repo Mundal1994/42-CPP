@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: molesen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 11:12:17 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/10 12:00:24 by molesen          ###   ########.fr       */
+/*   Created: 2023/01/10 12:07:51 by molesen           #+#    #+#             */
+/*   Updated: 2023/01/10 12:07:52 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
 #include <iostream>
-#include <fstream>
 #include "Form.hpp"
 
 class Form;
 
-class ShrubberyCreationForm : public Form
+class RobotomyRequestForm : public Form
 {
 private:
 	std::string	target;
 public:
-	ShrubberyCreationForm(std::string a):Form("ShrubberyCreationForm", false, 145, 137)
+	RobotomyRequestForm(std::string a):Form("RobotomyRequestForm", false, 72, 45)
 	{
 		target = a;
 	}

@@ -6,7 +6,7 @@
 #    By: molesen <molesen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/14 11:05:29 by molesen           #+#    #+#              #
-#    Updated: 2023/01/09 11:52:31 by molesen          ###   ########.fr        #
+#    Updated: 2023/01/10 12:02:46 by molesen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,8 @@ SRC = main.cpp
 SRC += Bureaucrat.cpp
 SRC += Form.cpp
 SRC += ShrubberyCreationForm.cpp
-#SRC += RobotomyRequestForm.cpp
-#SRC += PresidentialPardonForm.cpp
+SRC += RobotomyRequestForm.cpp
+SRC += PresidentialPardonForm.cpp
 
 all: $(NAME)
 $(NAME): $(SRC)

@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: molesen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 11:12:17 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/10 12:00:24 by molesen          ###   ########.fr       */
+/*   Created: 2023/01/10 12:07:32 by molesen           #+#    #+#             */
+/*   Updated: 2023/01/10 12:07:33 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
 #include <iostream>
-#include <fstream>
 #include "Form.hpp"
 
 class Form;
 
-class ShrubberyCreationForm : public Form
+class PresidentialPardonForm : public Form
 {
 private:
 	std::string	target;
 public:
-	ShrubberyCreationForm(std::string a):Form("ShrubberyCreationForm", false, 145, 137)
+	PresidentialPardonForm(std::string a):Form("PresidentialPardonForm", false, 25, 5)
 	{
 		target = a;
 	}
