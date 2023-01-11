@@ -51,15 +51,47 @@ static int non_valid_arg(void)
 	return (0);
 }
 
-static void	print_float(float nbr, int orig)
+int	ft_strlen_stop(char* input, int len, char c)
 {
-	std::cout << "float: ";
-	if (nbr == orig)
-		std::cout << nbr << ".0f" << std::endl;
-	else
-		std::cout << nbr << "f" << std::endl;
+	int	count;
+
+	count = 0;
+	while (count < len)
+	{
+		if (input[count] == c)
+			break ;
+		++count;
+	}
+	return (count);
 }
 
+// static int	within_limit_float(char *input, int len)
+// {
+// 	int	i;
+
+// 	i = 0;
+// 	if ((input[i] == '-' && len > 57) || (input[i] == '-' && \
+// 		len == 57 && strncmp(&input[i], "-340282346638528859811704183484516925440.0000000000000000", len) > 0))
+// 		return (0);
+// 	else if ((input[i] != '-' && len > 56) || (input[i] != '-' && \
+// 		len == 56 && strncmp(&input[i], "340282346638528859811704183484516925440.0000000000000000", len) > 0))
+// 		return (0);
+// 	return (1);
+// }
+
+// static int	within_limit_float(char *input, int len)
+// {
+// 	int	i;
+
+// 	i = 0;
+// 	if ((input[i] == '-' && len > 57) || (input[i] == '-' && \
+// 		len == 57 && strncmp(&input[i], "-340282346638528859811704183484516925440.0000000000000000", len) > 0))
+// 		return (0);
+// 	else if ((input[i] != '-' && len > 56) || (input[i] != '-' && \
+// 		len == 56 && strncmp(&input[i], "340282346638528859811704183484516925440.0000000000000000", len) > 0))
+// 		return (0);
+// 	return (1);
+// }
 static void	print_double(double nbr, int orig)
 {
 	std::cout << "double: ";
@@ -68,6 +100,7 @@ static void	print_double(double nbr, int orig)
 	else
 		std::cout << nbr << std::endl;
 }
+
 
 int main(int argc, char** argv)
 {
@@ -78,11 +111,11 @@ int main(int argc, char** argv)
 		type = analyse_arg(argv[1]);//add struct also to store the 4 values...
 		if (type == ERROR)
 			return (non_valid_arg());
+		std::cout << "TYPE: " << type << std::endl;
 		analyse_char(argv[1], type);
-		std::cout << type << std::endl;
-		std::cout << (char)type << std::endl;
+		analyse_int(argv[1], type);
+		analyse_float(argv[1], type);
 
-		print_float((float)type, type);
 		print_double((double)type, type);
 	}
 	else

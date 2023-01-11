@@ -29,6 +29,8 @@ static int	check_if_nbr(char *str)
 	}
 	if (str[i - 1] != 'f' && !isdigit(str[i - 1]))
 		return (ERROR);
+	if (!result_valid(str, result))
+		return (ERROR);
 	return (result);
 }
 
