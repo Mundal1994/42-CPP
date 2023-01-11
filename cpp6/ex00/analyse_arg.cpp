@@ -1,5 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   analyse_arg.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/11 15:59:40 by molesen           #+#    #+#             */
+/*   Updated: 2023/01/11 16:03:33 by molesen          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "converter.hpp"
+
+int	within_limit_int(char *input, int len)
+{
+	int	i;
+
+	i = 0;
+	if ((input[i] == '-' && len > 11) || (input[i] == '-' && \
+		len == 11 && strncmp(&input[i], "-2147483648", len) > 0))
+	{
+		std::cout << "impossible" << std::endl;
+		return (0);
+	}
+	else if ((input[i] != '-' && len > 10) || (input[i] != '-' && \
+		len == 10 && strncmp(&input[i], "2147483647", len) > 0))
+	{
+		std::cout << "impossible" << std::endl;
+		return (0);
+	}
+	return (1);
+}
 
 bool	is_visible_ASCII(char c)
 {
@@ -29,7 +60,7 @@ static int	check_if_nbr(char *str)
 	}
 	if (str[i - 1] != 'f' && !isdigit(str[i - 1]))
 		return (ERROR);
-	if (!result_valid(str, result))
+	if (result == INT && !within_limit_int(str, strlen(str)))
 		return (ERROR);
 	return (result);
 }
