@@ -6,7 +6,7 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:12:04 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/12 13:19:29 by molesen          ###   ########.fr       */
+/*   Updated: 2023/01/12 16:07:00 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	main(void)
 {
-	int a = 2;
-	int b = 3;
-	::iter( a, b );
+	int a[] = {1, 2, 4, 8, 16};
+	std::string b[] = {"hello", "my", "name", "is", "jefjef"};
+	
+	::iter( a, 5, ::print_element);
+	::iter(b, 5, ::print_element);
 	return (0);
 }
