@@ -6,11 +6,12 @@
 /*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:12:04 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/13 12:51:38 by molesen          ###   ########.fr       */
+/*   Updated: 2023/01/17 15:47:48 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Array.hpp"
+#include "Array.tpp"
+#include "Array.cpp"
 
 int	main(void)
 {
@@ -32,5 +33,11 @@ int	main(void)
 	here.getArray();
 	std::cout << "new: ";
 	newnew.getArray();
+
+	std::cout << "size: " << here.size() << std::endl;
+	std::cout << "newnew: " << newnew.size() << std::endl;
+	std::cout << "newnew[0]: " << newnew[0] << std::endl;
+	std::cout << "here[4]: " << here[4] << std::endl;
+	std::cout << "here[5]: " << here[5] << std::endl;
 	return (0);
 }
