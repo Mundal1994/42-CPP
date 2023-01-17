@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: molesen <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:03:56 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/17 16:03:58 by molesen          ###   ########.fr       */
+/*   Updated: 2023/01/17 17:48:12 by molesen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Array<T>::Array(unsigned int n)
 template <class T>
 Array<T>::~Array() {
 	std::cout << "destructor" << std::endl;
+	delete[] array;
 	return ;
 };
 
