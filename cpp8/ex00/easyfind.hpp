@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:07:12 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/18 12:04:13 by marvin           ###   ########.fr       */
+/*   Updated: 2023/01/18 12:33:08 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@
 #include <iostream>
 
 template <typename T>
-void	easyfind(T const& a, int nbr)
+void	easyfind(T& a, int nbr)
 {
-	unsigned int	i;
-	bool			found;
+	bool	found;
 
-	i = 0;
 	found = false;
 	for (int elem : a)
 	{	
@@ -31,7 +29,6 @@ void	easyfind(T const& a, int nbr)
 			found = true;
 			break ;
 		}
-		++i;
 	}
 	if (found == false)
 		std::cout << "error\n";
