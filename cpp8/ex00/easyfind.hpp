@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: molesen <molesen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:07:12 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/17 17:10:04 by molesen          ###   ########.fr       */
+/*   Updated: 2023/01/18 12:04:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,25 @@
 #include <iostream>
 
 template <typename T>
-T	easyfind(std::array<T,int>* a, int nbr)
+void	easyfind(T const& a, int nbr)
 {
 	unsigned int	i;
+	bool			found;
 
 	i = 0;
-	while (a[i])
-	{
-		if (a[i] == nbr)
+	found = false;
+	for (int elem : a)
+	{	
+		if (elem == nbr)
 		{
-			return (a[i]);
+			std::cout << elem << std::endl;
+			found = true;
+			break ;
 		}
 		++i;
 	}
-	//throw error();
-	std::cout << "error\n";
-	return (-1);
+	if (found == false)
+		std::cout << "error\n";
 }
 
 #endif
