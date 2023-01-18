@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:07:12 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/18 12:33:08 by marvin           ###   ########.fr       */
+/*   Updated: 2023/01/18 12:35:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	easyfind(T& a, int nbr)
 	bool	found;
 
 	found = false;
-	for (int elem : a)
+	for (const auto elem : a)
 	{	
 		if (elem == nbr)
 		{
