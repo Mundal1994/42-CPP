@@ -6,13 +6,16 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:12:04 by molesen           #+#    #+#             */
-/*   Updated: 2023/01/18 12:33:31 by marvin           ###   ########.fr       */
+/*   Updated: 2023/01/19 12:09:30 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
-#include <array>
-#include <vector>
+
+void	print(int i)
+{
+	std::cout << i << std::endl;
+}
 
 int	main(void)
 {
@@ -27,23 +30,37 @@ int	main(void)
 	vd.push_back(5);
 	vd.push_back(6);
 	
-	easyfind(vd, 1);
-	easyfind(vd, 3);
-	easyfind(vd, 6);
-	easyfind(vd, 10);
+	try
+	{
+		std::vector<int>::iterator it_vector = easyfind(vd, 2);
+		std::cout << "Vector starting at :" << std::endl;
+		for_each(it_vector, vd.end(), print);
 
-	std::cout << "Vector double: " << std::endl;
-	std::vector<double> vdouble;
-	vdouble.push_back(0.0);
-	vdouble.push_back(5.5);
-	easyfind(vdouble, 0);
-	easyfind(vdouble, 5);
-	easyfind(vdouble, 6);
+		std::cout << "error check" << std::endl;
+		it_vector = easyfind(vd, 7);
 
-	std::cout << "Array int: " << std::endl;
-	std::array<int, 6> varray = {0, 1, 2, 3, 4, 5};
-	easyfind(varray, 0);
-	easyfind(varray, 5);
-	easyfind(varray, 6);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	std::cout << "\nList int: " << std::endl;
+	std::list<int> vlist = {0, 1, 2, 3, 4, 5};
+
+	try
+	{
+		std::list<int>::iterator it_list = easyfind(vlist, 5);
+		std::cout << "List starting at :" << std::endl;
+		for_each(it_list, vlist.end(), print);
+
+		std::cout << "error check" << std::endl;
+		it_list = easyfind(vlist, 7);
+
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 	return (0);
 }
